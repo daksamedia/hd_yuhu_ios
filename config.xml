@@ -64,6 +64,7 @@
 	<plugin name="cordova-plugin-vibration" spec="2.1.5" />
 	<plugin name="cordova-plugin-statusbar" spec="2.2.3" />
 	 <plugin name="cordova-plugin-whitelist" spec="1.3.2" />
+	<plugin name="cordova-plugin-queries-schemes" spec="0.1.5" source="npm" />
 	<plugin name="onesignal-cordova-plugin" spec="2.1.1" source="npm" />
 	<plugin name="cordova-plugin-android-support-v7-appcompat" spec="1.0.0" source="npm" />
 	<plugin name="cordova-plugin-x-socialsharing" version="5.2.0" />
@@ -127,6 +128,11 @@
         <edit-config target="NSCameraUsageDescription" file="*-Info.plist" mode="overwrite"> 
 			<string>Used to attach photos to your projects</string> 
 		</edit-config>
+	 <gap:config-file target="*-Info.plist" parent="LSApplicationQueriesSchemes">
+	    <array>
+		<string>sakuku://transaction/qrselfie</string>
+		 </array>
+	</gap:config-file>
         <icon   src="res/icon/ios/icon.png"                         platform="ios" width="57"   height="57" />
         <icon   src="res/icon/ios/icon@2x.png"                      platform="ios" width="114"  height="114" />
         <icon   src="res/icon/ios/icon-40.png"                      platform="ios" width="40"   height="40" />
@@ -219,4 +225,5 @@
 	<gap:config-file platform="ios" parent="NSCameraUsageDescription" overwrite="true">
 			<string>We are using the Camera for something..</string>
 	</gap:config-file>
+	
 </widget>
