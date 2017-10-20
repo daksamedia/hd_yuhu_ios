@@ -850,8 +850,9 @@ $(document).ready(function() {
 		var options = "location=no,hardwareback=yes"
 		var ref = cordova.InAppBrowser.open(url, target, options); */
 		var url = "https://sprintasia.haagendazsindonesia.co.id/create_va?session_key="+ sess_key +"&order_id="+ hd_current_order +"&payment_channel_id=4";
-		$("#sprintasia").modal("show");
-		$("#sprintasia .modal-body iframe").attr("src",url);
+		//$("#sprintasia").modal("show");
+		//$("#sprintasia .modal-body iframe").attr("src",url);
+		window.location.href=url;
 	}
 	
 	
