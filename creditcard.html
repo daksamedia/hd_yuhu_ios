@@ -824,14 +824,7 @@ $(document).ready(function() {
 
 	 });
 
-	 $(".btnfix .continue").on('click', function() {
-		
-		$(this).attr("disabled",true);
-		$(this).attr("disabled","true");
-		setTimeout('window.location.href = "confirmation.html"; ',300);
-			   		
-		  
-	  });
+	 
 
 	// OPEN CC FORM
 	function opencc(){
@@ -887,6 +880,13 @@ $(document).ready(function() {
 		console.log(localStorage.hd_payment);
 		$(".btnfix .continue").css("opacity","1");
 	 	$(".btnfix .continue").attr("disabled",false);
+		$(".btnfix .continue").on('click', function() {
+		
+			$(this).attr("disabled",true);
+			$(this).attr("disabled","true");
+			setTimeout('window.location.href = "confirmation.html"; ',300);
+						  
+		});
 				
 	});
 
@@ -898,7 +898,17 @@ $(document).ready(function() {
 		opensakuku();
 		payment = "Sakuku";
 		localStorage.hd_payment = "Sakuku";
-		console.log(localStorage.hd_payment)
+		console.log(localStorage.hd_payment);
+		$(".btnfix .continue").css("opacity","1");
+	 	$(".btnfix .continue").attr("disabled",false);
+		$(".btnfix .continue").on('click', function() {
+			
+			$(this).attr("disabled",true);
+			$(this).attr("disabled","true");
+			setTimeout('window.location.href = "order.html?id='+ hd_current_order +'"; ',300);
+									  
+		  });
+												   
 	});
 
 	/* NAVTAB FIXED */
